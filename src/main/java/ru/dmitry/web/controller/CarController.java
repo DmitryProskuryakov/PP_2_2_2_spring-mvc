@@ -17,7 +17,7 @@ public class CarController {
         CarService carService = new CarService();
         List<Car> carList = new ArrayList<>();
 
-        if (count == null) {
+        if (count == null || count >= 5) {
             carList = carService.getAllCars();
             model.addAttribute("cars", carList);
             return "cars";

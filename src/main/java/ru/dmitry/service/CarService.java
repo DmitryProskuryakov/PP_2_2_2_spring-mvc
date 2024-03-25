@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class CarService {
+public class CarService implements CarServiceInterface{
     private CarDAO carDAO = new CarDAO();
 
     public CarService() {
@@ -18,10 +18,12 @@ public class CarService {
         this.carDAO = carDAO;
     }
 
+    @Override
     public List<Car> getAllCars() {
         return carDAO.getAllCars();
     }
 
+    @Override
     public List<Car> getAllCars(int count) {
         return carDAO.getAllCars(count);
     }
