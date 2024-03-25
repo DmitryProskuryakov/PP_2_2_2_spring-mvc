@@ -9,7 +9,7 @@ import java.util.List;
 
 @Component
 public class CarService implements CarServiceInterface{
-    private CarDAO carDAO = new CarDAO();
+    private CarDAO carDAO;
 
     public CarService() {
     }
